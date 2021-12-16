@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Huarique-Contacto</title>
+    <!-- favicon de página -->
+    <link rel="page icon"  href="../img/icono.jpg">
+    <!-- link google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+
+<body class="body3">
+    <!-- HEADER -->
+    
+    <header class="header">
+        <!-- icono de pagina en header -->
+        <div class="header__icono">
+            <a href="./index.html" target="_self">
+                <img src="../img/icono.jpg" alt="logo huarique" width="" height="">
+            </a>
+            
+        </div>
+        <!-- buscador de comida (no funcional sin backend) -->
+        <div class="header__buscador">
+            <form action="../../buscador-huariqe.php" method="post" target="_self">
+                <p>
+                <input type="search" name="busquedamenu" placeholder="¿Qué comemos hoy?">
+                <input type="submit" value="Buscar">
+                </p>
+            </form>
+        </div>
+
+        <!-- menu de navegación -->
+        <div class="header__menu">
+            <nav>
+                <ul>
+                    <li><a href="./index.html" target="_self">Home</a></li>
+                    <li><a href="./menu.html" target="_self">Menu</a></li>
+                    <li><a href="./nosotros.html" target="_self">Nosotros</a></li>
+                    <li><a href="./galeria.html" target="_self">Galeria</a></li>
+                    <li><a href="./contacto.html" target="_self">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="contacto">
+
+            <fieldset>
+            
+                <legend>HACÉ TU PEDIDO!</legend> 
+    
+                <br><br>
+                
+            <form action="" method="get"> <!-- se completaria por ejemplo con un enviar.php -->
+        
+                <label class="contacto__texto" for="nombre">Nombre</label>
+                <input class="contacto__texto" type="text" id="nombre" placeholder="Ingrese su Nombre" required>
+        
+                <br><br>
+        
+                <label class="contacto__texto" for="email">Email</label>
+                <input class="contacto__texto" type="email" name="email" id="email" placeholder="Ingrese su Email" required>
+    
+                <br><br>
+    
+                <h3>¿Qué vas a llevar hoy?</h3>
+
+                <br>
+        
+                <input class="contacto__check" type="checkbox" name="" id="menu_1"><label for="menu_1">Menú 1</label>
+                <input class="contacto__check" type="checkbox" name="" id="menu_2"><label for="menu_2">Menú 2</label>
+                <input class="contacto__check" type="checkbox" name="" id="menu_3"><label for="menu_3">Menú 3</label>
+                <input class="contacto__check" type="checkbox" name="" id="menu_4"><label for="menu_4">Menú 4</label>
+                <input class="contacto__check" type="checkbox" name="" id="menu_5"><label for="menu_5">Menú 5</label>
+        
+                <br><br>
+        
+                <h3>Selecciona tu método de pago</h3>
+        
+                <br>
+
+                <label for="pago">Efectivo</label>
+                <input class="contacto__check" type="radio" name="pago" id="pago-ef">
+                <label for="pago">Mercado Pago</label>
+                <input class="contacto__check" type="radio" name="pago" id="pago-mp">
+        
+                <br><br>
+        
+                <h3>¿A dónde lo enviamos?</h3>
+        
+                <br>
+
+                <label for="paises">Localidad:</label>
+                <select name="paises" id="paises">
+                    <option class="contacto__texto" value="1">Maschwitz</option>
+                    <option class="contacto__texto" value="2">Escobar</option>
+                </select>
+    
+                <br><br>
+    
+                <label for="nombre">Calle</label>
+                <input class="contacto__texto" type="text" id="calle" placeholder="Ingrese su Calle" required>
+                <label for="nombre">Número</label>
+                <input class="contacto__texto" type="text" id="numero" placeholder="Ingrese su Número" required>
+    
+                <br><br><br>
+    
+                <textarea class="contacto__campo" name="" id="" cols="30" rows="5" placeholder="Si tiene algún comentario déjelo aquí..."></textarea>
+        
+                <br><br>
+
+                <h4>Términos y condiciones</h4>
+
+                <br>
+        
+                <input class="contacto__check" type="checkbox" name="" id="acepto"><label for="acepto">Acepto los términos y condiciones</label>
+        
+                <br><br>
+        
+        
+                <!-- BOTONES -->
+        
+                <div class="contacto__botones">
+                    <input type="submit" value="Pedir ahora!">
+                    <input type="reset" value="Borrar todo">
+                </div>
+        
+            </fieldset>
+        
+            </form>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    
+    <footer class="footer">
+        
+        <div class="contenedor3">
+            <div class="footer__donde">
+                <div>
+                    <h3>¿DONDE ESTAMOS?</h3>
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis, facilis explicabo delectus numquam distinctio atque ea id quo voluptates? 
+                </div>
+            </div>
+            <div class="footer__maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.2587011294245!2d-58.74920034866905!3d-34.39476985388459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9fbe3691ac03%3A0x39ec295966c36fe6!2sMI%20HUARIQUE!5e0!3m2!1ses-419!2sar!4v1637024455740!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+        
+            <!-- redes -->
+        
+            <div class="footer__redes">
+                <!-- <fieldset> -->
+    
+                    <legend><h4>¡SEGUINOS EN LAS REDES!</h4></legend>
+        
+                    <div class="footer_redes--icono"> 
+                        <a href="./index.html" target="_self">
+                            <img src="../img/icono.jpg" alt="logo huarique" width="" height="">
+                        </a>
+                    </div>
+        
+                    <div class="footer_redes--icono">
+                        <a href="https://www.instagram.com/mihuarique.pe/" target="_blank">
+                            <img src="../img/insta_icon.png" alt="instagram" width="" height="">/mihuarique
+                        </a>
+                    </div>
+    
+                    <div class="footer_redes--icono">
+                        <a href="https://www.facebook.com/mihuariquepe" target="_blank">
+                            <img src="../img/facebook_icon.svg" alt="facebook" width="" height="">/mihuariquepe
+                        </a>
+                    </div>
+    
+                    <div class="footer_redes--icono">
+                        <a href="https://www.twitter.com" target="_blank">
+                            <img src="../img/twitter_icon.png" alt="twitter" width="" height="">twitter.com
+                        </a>
+                    </div>
+    
+                    <div>
+                        <div class="footer_redes--icono"> 
+                            <a href="https://open.spotify.com/playlist/718lfwgFOSwD5jA4aXZBBg?si=492b3f6f6c194a00" target="_blank">
+                                <img src="../img/spotify.png" alt="twitter" width="" height="">playlist!
+                            </a>
+                        </div>
+                        
+                        <div class="footer__spotify">
+                            <iframe src="https://open.spotify.com/embed/playlist/718lfwgFOSwD5jA4aXZBBg?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        </div>
+                    </div>
+
+    
+                <!-- </fieldset> -->
+                    
+            </div>
+        </div>
+        
+
+        <div class="footer__derechos">
+            <h5>Derechos reservados</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem voluptate commodi recusandae eius consequuntur eum labore, libero necessitatibus doloribus, consequatur assumenda animi aspernatur, earum illum nesciunt maiores magnam. Quod.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
