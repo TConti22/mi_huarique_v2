@@ -85,99 +85,100 @@
                     </nav>
 
             </header>
-        </div>
-    </header>
+        
+        </div> <!-- fin primera row -->
 
-    <main>
 
-        <div class="contacto">
+        <div class="row">
 
-            <fieldset>
+            <main>
+
+                <form class="row g-3">
+
+                    <div class="col-md-6">
+                        <h2>¡HACÉ TU PEDIDO!</h2>
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" required>
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" required>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+
+                    <div class="col-md-6">
+                        <h3>¿A dónde lo enviamos?</h3>
+                        <label for="inputAddress" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Calle Falsa 123" required>
+                        <label for="inputState" class="form-label">Localidad</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Elige...</option>
+                            <option class="contacto__texto" value="1">Maschwitz</option>
+                            <option class="contacto__texto" value="2">Escobar</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                    </div>
+
+                    <div class="col-md-6">
+                        <h3 class="">¿Qué vas a llevar hoy?</h3>
+                        <label for="inputState" class="form-label">Pedido #1</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Elige...</option>
+                            <option class="contacto__texto" value="1">Menu 1</option>
+                            <option class="contacto__texto" value="2">Menu 2</option>
+                            <option class="contacto__texto" value="3">Menu 3</option>
+                            <option class="contacto__texto" value="4">Menu 4</option>
+                            <option class="contacto__texto" value="5">Menu 5</option>
+                        </select>
+                        <label for="inputState" class="form-label">Pedido #2</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Elige...</option>
+                            <option class="contacto__texto" value="1">Menu 1</option>
+                            <option class="contacto__texto" value="2">Menu 2</option>
+                            <option class="contacto__texto" value="3">Menu 3</option>
+                            <option class="contacto__texto" value="4">Menu 4</option>
+                            <option class="contacto__texto" value="5">Menu 5</option>
+                        </select>
+                        <label for="inputState" class="form-label">Pedido #3</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Elige...</option>
+                            <option class="contacto__texto" value="1">Menu 1</option>
+                            <option class="contacto__texto" value="2">Menu 2</option>
+                            <option class="contacto__texto" value="3">Menu 3</option>
+                            <option class="contacto__texto" value="4">Menu 4</option>
+                            <option class="contacto__texto" value="5">Menu 5</option>
+                        </select>
+                        
+                    </div>
+
+                    <div class="col-md-6">
+                    </div>
+
+                    <div class="col-md-6">
+                        <span class="input-group-text">Dejanos tu comentario</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                            <label class="form-check-label" for="gridCheck">
+                            Acepto términos y condiciones
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Pedir ahora!</button>
+                        <button type="reset" class="btn btn-primary">Eliminar pedido</button>
+                    </div>
+
+                </form>
+
+            </main>
             
-                <legend>HACÉ TU PEDIDO!</legend> 
-    
-                <br><br>
-                
-            <form action="" method="get"> <!-- se completaria por ejemplo con un enviar.php -->
-        
-                <label class="contacto__texto" for="nombre">Nombre</label>
-                <input class="contacto__texto" type="text" id="nombre" placeholder="Ingrese su Nombre" required>
-        
-                <br><br>
-        
-                <label class="contacto__texto" for="email">Email</label>
-                <input class="contacto__texto" type="email" name="email" id="email" placeholder="Ingrese su Email" required>
-    
-                <br><br>
-    
-                <h3>¿Qué vas a llevar hoy?</h3>
-
-                <br>
-        
-                <input class="contacto__check" type="checkbox" name="" id="menu_1"><label for="menu_1">Menú 1</label>
-                <input class="contacto__check" type="checkbox" name="" id="menu_2"><label for="menu_2">Menú 2</label>
-                <input class="contacto__check" type="checkbox" name="" id="menu_3"><label for="menu_3">Menú 3</label>
-                <input class="contacto__check" type="checkbox" name="" id="menu_4"><label for="menu_4">Menú 4</label>
-                <input class="contacto__check" type="checkbox" name="" id="menu_5"><label for="menu_5">Menú 5</label>
-        
-                <br><br>
-        
-                <h3>Selecciona tu método de pago</h3>
-        
-                <br>
-
-                <label for="pago">Efectivo</label>
-                <input class="contacto__check" type="radio" name="pago" id="pago-ef">
-                <label for="pago">Mercado Pago</label>
-                <input class="contacto__check" type="radio" name="pago" id="pago-mp">
-        
-                <br><br>
-        
-                <h3>¿A dónde lo enviamos?</h3>
-        
-                <br>
-
-                <label for="paises">Localidad:</label>
-                <select name="paises" id="paises">
-                    <option class="contacto__texto" value="1">Maschwitz</option>
-                    <option class="contacto__texto" value="2">Escobar</option>
-                </select>
-    
-                <br><br>
-    
-                <label for="nombre">Calle</label>
-                <input class="contacto__texto" type="text" id="calle" placeholder="Ingrese su Calle" required>
-                <label for="nombre">Número</label>
-                <input class="contacto__texto" type="text" id="numero" placeholder="Ingrese su Número" required>
-    
-                <br><br><br>
-    
-                <textarea class="contacto__campo" name="" id="" cols="30" rows="5" placeholder="Si tiene algún comentario déjelo aquí..."></textarea>
-        
-                <br><br>
-
-                <h4>Términos y condiciones</h4>
-
-                <br>
-        
-                <input class="contacto__check" type="checkbox" name="" id="acepto"><label for="acepto">Acepto los términos y condiciones</label>
-        
-                <br><br>
-        
-        
-                <!-- BOTONES -->
-        
-                <div class="contacto__botones">
-                    <input type="submit" value="Pedir ahora!">
-                    <input type="reset" value="Borrar todo">
-                </div>
-        
-            </fieldset>
-        
-            </form>
         </div>
 
-    </main>
 
         <!-- FOOTER -->
             
