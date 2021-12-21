@@ -522,8 +522,10 @@ ul li a:hover {
 /* PAGINA DE GALERÍA */
 
 .carousel-item img {
-    /* max-width: 100vh !important; */
-    /* width: 200px !important; */
-    width: 70%;
+    width: 50vh !important;
     margin:auto;
+}
+
+.carousel-item h5 {
+    color: black;
 }
