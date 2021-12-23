@@ -1,3 +1,14 @@
+/* DECLARACIÓN DE VARS */
+
+$yellow: rgb(206, 119, 5);
+$red: rgb(255, 0, 0);
+$black: rgb(0, 0, 0);
+$black_2px: 2px 2px 2px rgb(0, 0, 0);
+$back_rojo: url(../assets/fondo_rojo_menu.jpg);
+$back_negro: url(../assets/fondo_4.jpg);
+$back_portada: url(../assets/fondo_5.jpg);
+
+
 /* RESET */
 
 *{
@@ -19,15 +30,15 @@ body {
     font-style: normal; 
     font-family: 'Fredoka One', cursive;
     overflow-x: auto;
-    color: rgb(206, 119, 5);
+    color: $yellow;
     letter-spacing: 1px;
     line-height: auto;
 }
 
 a{
     text-decoration: none !important;
-    color: rgb(206, 119, 5) !important;
-    text-shadow: 2px 2px 2px black;
+    color: $yellow !important;
+    text-shadow: $black_2px;
 }
 
 /* PROPIEDADES GENERALES DEL GRID */
@@ -43,8 +54,8 @@ a{
 .intro {
     grid-area: intro;
     height: auto;
-    background-image: url(../assets/fondo_5.jpg);
-    background-color: black;
+    background-image: $back_portada;
+    background-color: $black;
     background-position: center center;
     background-size: cover;
     .header__menu {
@@ -64,13 +75,13 @@ a{
             display: inline-block;
             box-sizing: border-box;
             font-size: 0.9rem;
-            text-shadow: 2px 2px 2px black;
+            text-shadow: $black_2px;
             text-align: center;
             padding: 8px;
             a {
                 color: #fff !important;
                 &:hover {
-                    color: rgb(206, 119, 5) !important;
+                    color: $yellow !important;
                 }
             }
         
@@ -90,14 +101,14 @@ a{
             font-style: normal; 
             font-family: 'Fredoka One', cursive;
             font-size: 1.2rem;
-            color: rgb(206, 119, 5);
-            background-image: url(../assets/fondo_rojo_menu.jpg);
-            background-color: red;
+            color: $yellow;
+            background-image: $back_rojo;
+            background-color: $red;
             background-position: center center;
             background-size: cover;
             position: relative;
             border-radius: 40px; 
-            border: 5px inset black;
+            border: 5px inset $black;
         }
     }
     
@@ -120,7 +131,7 @@ a{
     }
     
     .navbar-toggler{
-        background-color:rgb(206, 119, 5);
+        background-color:$yellow;
     }
 
     /* PORTADA */
@@ -134,19 +145,19 @@ a{
         text-align: left;
         margin-top: 0px;
         padding: 5px;
-        text-shadow: 5px 5px 5px black;
+        text-shadow: 5px 5px 5px $black;
     }
     
     
     .portada__boton {
-        background-image: url(../assets/fondo_rojo_menu.jpg);
-        background-color:red;
+        background-image: $back_rojo;
+        background-color:$red;
         font-size: 0.8rem;
         overflow: hidden;
         text-align: center;
         vertical-align: middle;
         border-radius: 10px;
-        border: 5px inset black;
+        border: 5px inset $black;
         left: 25px;
         margin-left: 5px;
         margin-bottom: 15px;   
@@ -161,15 +172,15 @@ a{
 
 
 .contenedor2 {
-    background-color: red;
-    background-image: url(../assets/fondo_rojo_menu.jpg);
+    background-color: $red;
+    background-image: $back_rojo;
     /* width: 100%; */
     background-size: cover;
     .section {
         grid-area: section;
         width: 100%;
-        border-top: 10px dashed rgb(206, 119, 5);
-        border-bottom: 10px dashed rgb(206, 119, 5);
+        border-top: 10px dashed $yellow;
+        border-bottom: 10px dashed $yellow;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -185,9 +196,9 @@ a{
         text-align: center;
         margin-top: 15px;
         margin-bottom: 15px;
-        background-image: url(../assets/fondo_4.jpg);
+        background-image: $back_negro;
         background-size: cover;
-        background-color: black;
+        background-color: $black;
         background-position: center center;
         border-radius: 20px;
         h4 {
@@ -198,8 +209,8 @@ a{
             height: 100px;
             overflow: hidden;
             font-size: 0.8 rem;
-            color: rgb(206, 119, 5);
-            text-shadow: 2px 2px 2px black;
+            color: $yellow;
+            text-shadow: $black_2px;
         }
     }
 }
@@ -213,12 +224,12 @@ a{
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-around;
-        background-image: url(../assets/fondo_4.jpg);
+        background-image: $back_negro;
         background-size: cover;
-        background-color: black;
+        background-color: $black;
         background-position: center center;
         position: relative;
-        border-bottom: 10px dashed rgb(206, 119, 5);
+        border-bottom: 10px dashed $yellow;
         h3 {
             margin-top: 10px;
             font-size: 1.4rem; 
@@ -267,7 +278,7 @@ a{
             
             }
             a {
-                color: rgb(206, 119, 5);
+                color: $yellow;
                 display: inline-block;
             }
         }
@@ -281,8 +292,8 @@ a{
         
     } 
     .footer__derechos {
-        background-color: red;
-        background-image: url(../assets/fondo_rojo_menu.jpg);
+        background-color: $red;
+        background-image: $back_rojo;
         background-size: cover;
         font-size: 0.8rem;
         height: auto;
@@ -368,7 +379,7 @@ a{
 
     .section {
         height: 300px;
-        border-top: 10px dashed rgb(206, 119, 5);;
+        border-top: 10px dashed $yellow;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -414,7 +425,7 @@ a{
 
     .section {
         height: 300px;
-        border-top: 10px dashed rgb(206, 119, 5);;
+        border-top: 10px dashed $yellow;
         display: flex;
     }
 
@@ -426,9 +437,9 @@ a{
 /* PAGINA DE MENU */
 
 .body2 {
-    background-image: url(../assets/fondo_4.jpg);
+    background-image: $back_negro;
     background-size: cover;
-    background-color: black;
+    background-color: $black;
     background-position: center center;
     position: relative;
 }
@@ -482,5 +493,5 @@ a{
 }
 
 .carousel-item h5 {
-    color: black;
+    color: $black;
 }
