@@ -1,12 +1,39 @@
+/* DECLARACIÓN DE MAPS */
+
+$colores: (
+    color_1: rgb(218, 134, 0),
+    color_2: rgb(255, 0, 0),
+    color_3: rgb(0, 0, 0),
+    color_4: rgb(255, 255, 255)
+);
+
+$background_img: (
+    fondo_1: url(../assets/fondo_rojo_menu.jpg),
+    fondo_2: url(../assets/fondo_4.jpg),
+    fondo_3: url(../assets/fondo_5.jpg),
+);
+
+$typo: (
+    typo_1: 'Fredoka One',
+    typo_2: 'Permanent Marker',
+);
+
+$borders: (
+    border_black_2px: 2px 2px 2px rgb(0, 0, 0),
+    border_black_5px_inset: 5px inset rgb(0, 0, 0),
+    border_yellow_10px_dashed: 10px dashed rgb(218, 134, 0),
+);
+    
+$shadows: (
+    black_2px: 2px 2px 2px rgb(0, 0, 0), 
+    black_5px: 5px 5px 5px rgb (0,0,0),
+);
+
 /* DECLARACIÓN DE VARS */
 
-$yellow: rgb(206, 119, 5);
-$red: rgb(255, 0, 0);
-$black: rgb(0, 0, 0);
-$black_2px: 2px 2px 2px rgb(0, 0, 0);
-$back_rojo: url(../assets/fondo_rojo_menu.jpg);
-$back_negro: url(../assets/fondo_4.jpg);
-$back_portada: url(../assets/fondo_5.jpg);
+$vh: 1vh;
+$rem: 1rem;
+$px: 1px;
 
 
 /* RESET */
@@ -22,24 +49,25 @@ $back_portada: url(../assets/fondo_5.jpg);
 /* PROPIEDADES GENERALES */
 
 html{
-	font-size: 1.2rem;
+	font-size: 1.2*$rem;
 }
 
 body {
     font-weight: bold;
     font-style: normal; 
-    font-family: 'Fredoka One', cursive;
+    font-family: map-get($map: $typo, $key: typo_1), cursive;
     overflow-x: auto;
-    color: $yellow;
-    letter-spacing: 1px;
+    color: map-get($colores, color_1);
+    letter-spacing: $px;
     line-height: auto;
 }
 
 a{
     text-decoration: none !important;
-    color: $yellow !important;
-    text-shadow: $black_2px;
+    color: map-get($map: $colores, $key: color_1) !important;
+    text-shadow: map-get($map: $shadows, $key: black_2px);
 }
+
 
 /* PROPIEDADES GENERALES DEL GRID */
 
@@ -54,14 +82,14 @@ a{
 .intro {
     grid-area: intro;
     height: auto;
-    background-image: $back_portada;
-    background-color: $black;
+    background-image: map-get($map: $background_img, $key: fondo_3);
+    background-color: map-get($map: $colores, $key: color_3);
     background-position: center center;
     background-size: cover;
     .header__menu {
         position: relative;
-        top: -20px;
-        right: 0px;
+        top: $px*-20;
+        right: $px*0;
         display: flex;
         justify-content: flex-end; 
     }
@@ -74,14 +102,14 @@ a{
         li {
             display: inline-block;
             box-sizing: border-box;
-            font-size: 0.9rem;
-            text-shadow: $black_2px;
+            /* font-size: 0.9rem; */
+            text-shadow: map-get($map: $shadows, $key: black_2px);
             text-align: center;
-            padding: 8px;
+            padding: $px*8;
             a {
-                color: #fff !important;
+                color: map-get($colores, color_4) !important;
                 &:hover {
-                    color: $yellow !important;
+                    color: map-get($map: $colores, $key: color_1) !important;
                 }
             }
         
@@ -92,75 +120,75 @@ a{
     
     .header__buscador {
         position: relative;
-        top: 65px;
-        left: 60px;
+        top: $px*65;
+        left: $px*60;
         display: inline-block; 
         input {
-            height: 35px;
+            height: $px*35;
             font-weight: normal;
             font-style: normal; 
-            font-family: 'Fredoka One', cursive;
-            font-size: 1.2rem;
-            color: $yellow;
-            background-image: $back_rojo;
-            background-color: $red;
+            font-family: map-get($map: $typo, $key: typo_1), cursive;
+            font-size: 1.2*$rem;
+            color: map-get($map: $colores, $key: color_1);
+            background-image: map-get($map: $background_img, $key: fondo_1);
+            background-color: map-get($map: $colores, $key: color_2);
             background-position: center center;
             background-size: cover;
             position: relative;
-            border-radius: 40px; 
-            border: 5px inset $black;
+            border-radius: $px*40; 
+            border: map-get($map: $borders, $key: border_black_5px_inset);
         }
     }
     
     .header__buscador--texto {
-        width: 270px;
+        width: $px*270;
     }
     
     
     .header__buscador--boton {
-        width: 100px; 
+        width: $px*100; 
     }
     
     /* ICONO DE HEADER */
     
     .header__icono {
-        padding:5px;
-        border-radius: 100px;
-        height: 100px;
+        padding:$px*5;
+        border-radius: $px*100;
+        height: 100*$px;
     
     }
     
     .navbar-toggler{
-        background-color:$yellow;
+        background-color: map-get($map: $colores, $key: color_1);
     }
 
     /* PORTADA */
     
     .portada__titulo {
-        font-size: 1rem; 
+        font-size: $rem; 
         font-weight: normal; 
         font-style: normal; 
-        font-family: 'Permanent Marker', cursive;
-        color: white;
+        font-family: map-get($map: $typo, $key: typo_2), cursive;
+        color: map-get($colores, color_4);
         text-align: left;
-        margin-top: 0px;
-        padding: 5px;
-        text-shadow: 5px 5px 5px $black;
+        margin-top: 0*$px;
+        padding: 5*$px;
+        text-shadow: map-get($map: $shadows, $key: black_5px);
     }
     
     
     .portada__boton {
-        background-image: $back_rojo;
-        background-color:$red;
-        font-size: 0.8rem;
+        background-image: map-get($map: $background_img, $key: fondo_1);
+        background-color: map-get($map: $colores, $key: color_2);
+        font-size: 0.8*$rem;
         overflow: hidden;
         text-align: center;
         vertical-align: middle;
-        border-radius: 10px;
-        border: 5px inset $black;
-        left: 25px;
-        margin-left: 5px;
-        margin-bottom: 15px;   
+        border-radius: 10*$px;
+        border: map-get($map: $borders, $key: border_black_5px_inset);
+        left: 25*$px;
+        margin-left: 5*$px;
+        margin-bottom: 15*$px;   
     }
 }
 
@@ -172,15 +200,15 @@ a{
 
 
 .contenedor2 {
-    background-color: $red;
-    background-image: $back_rojo;
+    background-color: map-get($map: $colores, $key: color_2);
+    background-image: map-get($map: $background_img, $key: fondo_1);
     /* width: 100%; */
     background-size: cover;
     .section {
         grid-area: section;
         width: 100%;
-        border-top: 10px dashed $yellow;
-        border-bottom: 10px dashed $yellow;
+        border-top: map-get($map: $borders, $key: border_yellow_10px_dashed);
+        border-bottom: map-get($map: $borders, $key: border_yellow_10px_dashed);
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -188,58 +216,58 @@ a{
     
     
     .menu__item {
-        height: 250px;
+        height: 250*$px;
         display: inline-block;
         position: relative;
-        padding: 10px;
+        padding: 10*$px;
         overflow: hidden;
         text-align: center;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        background-image: $back_negro;
+        margin-top: 15*$px;
+        margin-bottom: 15*$px;
+        background-image: map-get($map: $background_img, $key: fondo_2);
         background-size: cover;
-        background-color: $black;
+        background-color: map-get($map: $colores, $key: color_3);
         background-position: center center;
-        border-radius: 20px;
+        border-radius: 20*$px;
         h4 {
-            font-size: 0.8rem;
-            padding:5px;
+            font-size: 0.8*$rem;
+            padding:5*$px;
         }
         p {
-            height: 100px;
+            height: 100*$px;
             overflow: hidden;
-            font-size: 0.8 rem;
-            color: $yellow;
-            text-shadow: $black_2px;
+            font-size: 0.8*$rem;
+            color: map-get($map: $colores, $key: color_1);
+            text-shadow: map-get($map: $shadows, $key: black_2px);
         }
     }
 }
 
 .footer {
     grid-area: footer;
-    padding: 0px;
-    margin: 0px ;
+    padding: 0*$px;
+    margin: 0*$px ;
     .contenedor3 {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-around;
-        background-image: $back_negro;
+        background-image: map-get($map: $background_img, $key: fondo_2);
         background-size: cover;
-        background-color: $black;
+        background-color: map-get($map: $colores, $key: color_3);
         background-position: center center;
         position: relative;
-        border-bottom: 10px dashed $yellow;
+        border-bottom: map-get($map: $borders, $key: border_yellow_10px_dashed);
         h3 {
-            margin-top: 10px;
-            font-size: 1.4rem; 
-            padding: 20px;
+            margin-top: 10*$px;
+            font-size: 1.4*$rem; 
+            padding: 20*$px;
             text-align: center;
         }
         .footer__donde {
             text-align: left;
             overflow: hidden;
-            font-size: 0.8rem;
+            font-size: 0.8*$rem;
             display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
@@ -249,19 +277,19 @@ a{
         }
         
         .footer__donde--texto {
-            padding: 10px;
+            padding: 10*$px;
             text-align: left;
             vertical-align: middle;
             width:30%
         }
         
         .footer__maps {
-            padding: 20px; 
+            padding: 20*$px; 
             iframe {
                 width: 100%;
-                height: 200px;
-                border-radius: 20px;
-                padding: 10px; 
+                height: 200*$px;
+                border-radius: 20*$px;
+                padding: 10*$px; 
             }
         } 
         
@@ -272,38 +300,38 @@ a{
             display: flex;
             flex-wrap: wrap;
             img {
-                padding:10px;
-                border-radius: 100px;
-                height: 50px;
+                padding:10*$px;
+                border-radius: 100*$px;
+                height: 50*$px;
             
             }
             a {
-                color: $yellow;
+                color: map-get($map: $colores, $key: color_1);
                 display: inline-block;
             }
         }
         
         .footer__spotify {
-            padding:10px ;
+            padding:10*$px ;
             iframe {
-                border-radius: 20px;
+                border-radius: 20*$px;
             }
         } 
         
     } 
     .footer__derechos {
-        background-color: $red;
-        background-image: $back_rojo;
+        background-color: map-get($map: $colores, $key: color_2);
+        background-image: map-get($map: $background_img, $key: fondo_1);
         background-size: cover;
-        font-size: 0.8rem;
+        font-size: 0.8*$rem;
         height: auto;
         h5 {
-            padding-left: 10px;
-            padding-top: 10px;
+            padding-left: 10*$px;
+            padding-top: 10*$px;
         }
         p {
-            margin-bottom: 0px;
-            padding: 10px;
+            margin-bottom: 0*$px;
+            padding: 10*$px;
         }
     }
 }
@@ -316,29 +344,29 @@ a{
 @media (min-width: 480px) and (max-width: 1024px) {
 
     li {
-        font-size: 1.1rem;
-        padding: 8px;
+        font-size: 1.1*$rem;
+        padding: 8*$px;
     }
 
 
     .header__buscador {
-        top: 65px;
-        left: 180px;
+        top: 65*$px;
+        left: 180*$px;
         display: inline-block; 
     }
 
     .portada__titulo {
-        font-size: 1.2rem; 
-        top: 60px;
-        padding: 25px;
+        font-size: 1.2*$rem; 
+        top: 60*$px;
+        padding: 25*$px;
     }
 
     .portada__boton {
-        top: 60px;  
+        top: 60*$px;  
     }
 
     .menu__item {
-        width: 350px;
+        width: 350*$px;
     }
 
 }
@@ -346,100 +374,100 @@ a{
 @media (min-width: 1025px) and (max-width: 1199px) {
 
     li {
-        font-size: 1.1rem;
-        padding: 16px;
+        font-size: 1.1*$rem;
+        padding: 16*$px;
     }
 
 
     .header__buscador {
-        top: 65px;
-        left: 350px;
+        top: 65*$px;
+        left: 350*$px;
         display: inline-block; 
     }
 
     .header__icono img {
-        height: 135px;
-        left: 5px;
-        top: 5px;
+        height: 135*$px;
+        left: 5*$px;
+        top: 5*$px;
     }
 
     .portada__titulo {
-        font-size: 1.2rem; 
-        top: 40px;
-        padding: 25px;
+        font-size: 1.2*$rem; 
+        top: 40*$px;
+        padding: 25*$px;
     }
 
     .portada__boton {
-        top: 40px;  
+        top: 40*$px;  
     }
 
     .menu__item {
-        width: 250px;
+        width: 250*$px;
     }
 
     .section {
-        height: 300px;
-        border-top: 10px dashed $yellow;
+        height: 300*$px;
+        border-top: map-get($map: $borders, $key: border_yellow_10px_dashed);
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
 
     .footer {
-        height: 400px;
+        height: 400*$px;
     }
 }
 
 @media (min-width: 1200px) {
 
     li {
-        font-size: 1.3rem;
-        padding: 30px;
+        font-size: 1.3*$rem;
+        padding: 30*$px;
     }
 
     .header__buscador {
-        top: 100px;
-        left: 720px;
+        top: 100*$px;
+        left: 720*$px;
         display: inline-block; 
     }
 
     .header__icono img {
-        height: 155px;
-        left: 5px;
-        top: 5px;
+        height: 155*$px;
+        left: 5*$px;
+        top: 5*$px;
     }
 
     .portada__titulo {
-        font-size: 1.3rem; 
-        top: 0px;
-        padding: 25px;
+        font-size: 1.3*$rem; 
+        top: 0*$px;
+        padding: 25*$px;
     }
 
     .portada__boton {
-        top: 0px;  
+        top: 0*$px;  
     }
 
     .menu__item {
-        width: 250px;
+        width: 250*$px;
     }
 
     .section {
-        height: 300px;
-        border-top: 10px dashed $yellow;
+        height: 300*$px;
+        border-top: map-get($map: $borders, $key: border_yellow_10px_dashed);
         display: flex;
     }
 
     .footer {
-        height: 400px;
+        height: 400*$px;
     }
 }
 
 /* PAGINA DE MENU */
 
 .body2 {
-    background-image: $back_negro;
+    background-image: map-get($map: $background_img, $key: fondo_2);
     background-size: cover;
-    background-color: $black;
+    background-color: map-get($map: $colores, $key: color_3);
     background-position: center center;
     position: relative;
 }
@@ -451,11 +479,11 @@ a{
 }
 
 .galeria img {
-    height: 50vh;
-    width: 50vh;
-    padding:10px;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    height: $vh*50;
+    width: $vh*50;
+    padding:10*$px;
+    border-top-right-radius: 50*$px;
+    border-bottom-left-radius: 50*$px;
 }
 
 
@@ -467,8 +495,8 @@ a{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin-top: 20px;
-    padding:30px;
+    margin-top: 20*$px;
+    padding:30*$px;
 }
 
 .texto {
@@ -477,21 +505,21 @@ a{
 
 .profile__imagen {
     display: inline-block;
-    padding: 20px;
+    padding: 20*$px;
 }
 
 .profile__imagen img{
-    border-radius: 20px;
+    border-radius: 20*$px;
 }
 
 
 /* PAGINA DE GALERÍA */
 
 .carousel-item img {
-    width: 50vh !important;
+    width: $vh*50 !important;
     margin:auto;
 }
 
 .carousel-item h5 {
-    color: $black;
+    color: map-get($map: $colores, $key: color_3);
 }

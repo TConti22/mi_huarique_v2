@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* DECLARACIÓN DE MAPS */
 /* DECLARACIÓN DE VARS */
 /* RESET */
 * {
@@ -17,16 +18,16 @@ html {
 body {
   font-weight: bold;
   font-style: normal;
-  font-family: 'Fredoka One', cursive;
+  font-family: "Fredoka One", cursive;
   overflow-x: auto;
-  color: #ce7705;
+  color: #da8600;
   letter-spacing: 1px;
   line-height: auto;
 }
 
 a {
   text-decoration: none !important;
-  color: #ce7705 !important;
+  color: #da8600 !important;
   text-shadow: 2px 2px 2px black;
 }
 
@@ -75,18 +76,18 @@ a {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
   text-shadow: 2px 2px 2px black;
   text-align: center;
   padding: 8px;
 }
 
 .intro ul li a {
-  color: #fff !important;
+  color: white !important;
 }
 
 .intro ul li a:hover {
-  color: #ce7705 !important;
+  color: #da8600 !important;
 }
 
 .intro .header__buscador {
@@ -100,9 +101,9 @@ a {
   height: 35px;
   font-weight: normal;
   font-style: normal;
-  font-family: 'Fredoka One', cursive;
+  font-family: "Fredoka One", cursive;
   font-size: 1.2rem;
-  color: #ce7705;
+  color: #da8600;
   background-image: url(../assets/fondo_rojo_menu.jpg);
   background-color: red;
   background-position: center center;
@@ -127,19 +128,19 @@ a {
 }
 
 .intro .navbar-toggler {
-  background-color: #ce7705;
+  background-color: #da8600;
 }
 
 .intro .portada__titulo {
   font-size: 1rem;
   font-weight: normal;
   font-style: normal;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   color: white;
   text-align: left;
   margin-top: 0px;
   padding: 5px;
-  text-shadow: 5px 5px 5px black;
+  text-shadow: 5px 5px 5px rgb 0, 0, 0;
 }
 
 .intro .portada__boton {
@@ -169,8 +170,8 @@ a {
   -ms-grid-column: 1;
   grid-area: section;
   width: 100%;
-  border-top: 10px dashed #ce7705;
-  border-bottom: 10px dashed #ce7705;
+  border-top: 10px dashed #da8600;
+  border-bottom: 10px dashed #da8600;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,8 +205,8 @@ a {
 .contenedor2 .menu__item p {
   height: 100px;
   overflow: hidden;
-  font-size: 0.8 rem;
-  color: #ce7705;
+  font-size: 0.8rem;
+  color: #da8600;
   text-shadow: 2px 2px 2px black;
 }
 
@@ -233,7 +234,7 @@ a {
   background-color: black;
   background-position: center center;
   position: relative;
-  border-bottom: 10px dashed #ce7705;
+  border-bottom: 10px dashed #da8600;
 }
 
 .footer .contenedor3 h3 {
@@ -301,7 +302,7 @@ a {
 }
 
 .footer .contenedor3 .footer__redes a {
-  color: #ce7705;
+  color: #da8600;
   display: inline-block;
 }
 
@@ -383,7 +384,7 @@ a {
   }
   .section {
     height: 300px;
-    border-top: 10px dashed #ce7705;
+    border-top: 10px dashed #da8600;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -425,7 +426,7 @@ a {
   }
   .section {
     height: 300px;
-    border-top: 10px dashed #ce7705;
+    border-top: 10px dashed #da8600;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
