@@ -32,6 +32,8 @@ html {
 }
 
 /* FIN DE DECLARACION DE EXTENDS */
+/* DECLARACION DE MIXINS */
+/* FIN DE DECLARACION DE EXTENDS */
 body {
   font-weight: bold;
   font-style: normal;
@@ -142,12 +144,6 @@ a {
 
 /* CONTENEDOR DE EL MENU DE ICONOS + FOOTER + DERECHOS */
 .contenedor2 .section {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: section;
-  width: 100%;
-  border-top: 10px dashed #da8600;
-  border-bottom: 10px dashed #da8600;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,6 +151,12 @@ a {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: section;
+  width: 100%;
+  border-top: 10px dashed #da8600;
+  border-bottom: 10px dashed #da8600;
 }
 
 .contenedor2 .menu__item {
@@ -196,11 +198,11 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   position: relative;
   border-bottom: 10px dashed #da8600;
 }
@@ -213,25 +215,25 @@ a {
 }
 
 .footer .contenedor3 .footer__donde {
-  text-align: left;
-  overflow: hidden;
-  font-size: 0.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   vertical-align: middle;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: left;
+  overflow: hidden;
+  font-size: 0.8rem;
 }
 
 .footer .contenedor3 .footer__donde--texto {
@@ -427,13 +429,13 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 20px;
   padding: 30px;
 }

@@ -72,6 +72,29 @@ html{
 
 /* FIN DE DECLARACION DE EXTENDS */
 
+/* DECLARACION DE MIXINS */
+
+@mixin flex-wrap-spacearound {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@mixin flex-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@mixin flex-nowrap-center {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+
+/* FIN DE DECLARACION DE EXTENDS */
+
 body {
     font-weight: bold;
     font-style: normal; 
@@ -189,13 +212,11 @@ a{
 .contenedor2 {
     @extend .back__rojo;
     .section {
+        @include flex-wrap-spacearound;
         grid-area: section;
         width: 100%;
         border-top: map-get($map: $borders, $key: border_yellow_10px_dashed);
         border-bottom: map-get($map: $borders, $key: border_yellow_10px_dashed);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
     }
     
     
@@ -230,10 +251,8 @@ a{
     margin: 0*$px ;
     .contenedor3 {
         @extend .back__negro;
-        display: flex;
-        flex-wrap: wrap;
+        @include flex-wrap-spacearound;
         align-items: center;
-        justify-content: space-around;
         position: relative;
         border-bottom: map-get($map: $borders, $key: border_yellow_10px_dashed);
         h3 {
@@ -243,15 +262,13 @@ a{
             text-align: center;
         }
         .footer__donde {
+            @include flex-nowrap-center;
+            flex-direction: row;
+            vertical-align: middle;
+            align-items: center;
             text-align: left;
             overflow: hidden;
             font-size: 0.8*$rem;
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            justify-content: center;
-            vertical-align: middle;
-            align-items: center;
         }
         .footer__donde--texto {
             padding: 10*$px;
@@ -378,9 +395,7 @@ a{
     .section {
         height: 300*$px;
         border-top: map-get($map: $borders, $key: border_yellow_10px_dashed);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        @include flex-wrap-spacearound;
     }
 
     .footer {
@@ -439,9 +454,7 @@ a{
 }
 
 .main__menu{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include flex-wrap-spacearound;
 }
 
 .galeria img {
@@ -457,10 +470,8 @@ a{
 
 
 .main__nosotros {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap-center;
     flex-direction: row;
-    justify-content: center;
     margin-top: 20*$px;
     padding:30*$px;
 }
