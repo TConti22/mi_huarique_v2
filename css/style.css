@@ -15,6 +15,23 @@ html {
   font-size: 1.2rem;
 }
 
+/* DECLARACION DE CLASES PARA EXTENDS (EVITAR USO EN HTML)*/
+.back__rojo, .intro .portada__boton, .contenedor2, .footer .footer__derechos {
+  color: #da8600;
+  background-image: url(../assets/fondo_rojo_menu.jpg);
+  background-color: red;
+  background-position: center center;
+  background-size: cover;
+}
+
+.back__negro, .contenedor2 .menu__item, .footer .contenedor3, .body2 {
+  background-image: url(../assets/fondo_4.jpg);
+  background-size: cover;
+  background-color: black;
+  background-position: center center;
+}
+
+/* FIN DE DECLARACION DE EXTENDS */
 body {
   font-weight: bold;
   font-style: normal;
@@ -50,7 +67,6 @@ a {
   background-position: center center;
   background-size: cover;
   /* MENU NAV */
-  /* BUSCADOR */
   /* ICONO DE HEADER */
   /* PORTADA */
 }
@@ -90,37 +106,6 @@ a {
   color: #da8600 !important;
 }
 
-.intro .header__buscador {
-  position: relative;
-  top: 65px;
-  left: 60px;
-  display: inline-block;
-}
-
-.intro .header__buscador input {
-  height: 35px;
-  font-weight: normal;
-  font-style: normal;
-  font-family: "Fredoka One", cursive;
-  font-size: 1.2rem;
-  color: #da8600;
-  background-image: url(../assets/fondo_rojo_menu.jpg);
-  background-color: red;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-  border-radius: 40px;
-  border: 5px inset black;
-}
-
-.intro .header__buscador--texto {
-  width: 270px;
-}
-
-.intro .header__buscador--boton {
-  width: 100px;
-}
-
 .intro .header__icono {
   padding: 5px;
   border-radius: 100px;
@@ -144,8 +129,6 @@ a {
 }
 
 .intro .portada__boton {
-  background-image: url(../assets/fondo_rojo_menu.jpg);
-  background-color: red;
   font-size: 0.8rem;
   overflow: hidden;
   text-align: center;
@@ -158,13 +141,6 @@ a {
 }
 
 /* CONTENEDOR DE EL MENU DE ICONOS + FOOTER + DERECHOS */
-.contenedor2 {
-  background-color: red;
-  background-image: url(../assets/fondo_rojo_menu.jpg);
-  /* width: 100%; */
-  background-size: cover;
-}
-
 .contenedor2 .section {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -190,10 +166,6 @@ a {
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
-  background-image: url(../assets/fondo_4.jpg);
-  background-size: cover;
-  background-color: black;
-  background-position: center center;
   border-radius: 20px;
 }
 
@@ -229,10 +201,6 @@ a {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-image: url(../assets/fondo_4.jpg);
-  background-size: cover;
-  background-color: black;
-  background-position: center center;
   position: relative;
   border-bottom: 10px dashed #da8600;
 }
@@ -315,9 +283,6 @@ a {
 }
 
 .footer .footer__derechos {
-  background-color: red;
-  background-image: url(../assets/fondo_rojo_menu.jpg);
-  background-size: cover;
   font-size: 0.8rem;
   height: auto;
 }
@@ -437,14 +402,6 @@ a {
 }
 
 /* PAGINA DE MENU */
-.body2 {
-  background-image: url(../assets/fondo_4.jpg);
-  background-size: cover;
-  background-color: black;
-  background-position: center center;
-  position: relative;
-}
-
 .main__menu {
   display: -webkit-box;
   display: -ms-flexbox;

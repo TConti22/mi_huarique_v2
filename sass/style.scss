@@ -52,6 +52,26 @@ html{
 	font-size: 1.2*$rem;
 }
 
+/* DECLARACION DE CLASES PARA EXTENDS (EVITAR USO EN HTML)*/
+
+.back__rojo {
+    color: map-get($map: $colores, $key: color_1);
+    background-image: map-get($map: $background_img, $key: fondo_1);
+    background-color: map-get($map: $colores, $key: color_2);
+    background-position: center center;
+    background-size: cover;
+}
+
+.back__negro {
+    background-image: map-get($map: $background_img, $key: fondo_2);
+    background-size: cover;
+    background-color: map-get($map: $colores, $key: color_3);
+    background-position: center center;
+}
+
+
+/* FIN DE DECLARACION DE EXTENDS */
+
 body {
     font-weight: bold;
     font-style: normal; 
@@ -116,38 +136,6 @@ a{
         }
     }
     
-    /* BUSCADOR */
-    
-    .header__buscador {
-        position: relative;
-        top: $px*65;
-        left: $px*60;
-        display: inline-block; 
-        input {
-            height: $px*35;
-            font-weight: normal;
-            font-style: normal; 
-            font-family: map-get($map: $typo, $key: typo_1), cursive;
-            font-size: 1.2*$rem;
-            color: map-get($map: $colores, $key: color_1);
-            background-image: map-get($map: $background_img, $key: fondo_1);
-            background-color: map-get($map: $colores, $key: color_2);
-            background-position: center center;
-            background-size: cover;
-            position: relative;
-            border-radius: $px*40; 
-            border: map-get($map: $borders, $key: border_black_5px_inset);
-        }
-    }
-    
-    .header__buscador--texto {
-        width: $px*270;
-    }
-    
-    
-    .header__buscador--boton {
-        width: $px*100; 
-    }
     
     /* ICONO DE HEADER */
     
@@ -178,8 +166,7 @@ a{
     
     
     .portada__boton {
-        background-image: map-get($map: $background_img, $key: fondo_1);
-        background-color: map-get($map: $colores, $key: color_2);
+        @extend .back__rojo;
         font-size: 0.8*$rem;
         overflow: hidden;
         text-align: center;
@@ -200,10 +187,7 @@ a{
 
 
 .contenedor2 {
-    background-color: map-get($map: $colores, $key: color_2);
-    background-image: map-get($map: $background_img, $key: fondo_1);
-    /* width: 100%; */
-    background-size: cover;
+    @extend .back__rojo;
     .section {
         grid-area: section;
         width: 100%;
@@ -216,6 +200,7 @@ a{
     
     
     .menu__item {
+        @extend .back__negro;
         height: 250*$px;
         display: inline-block;
         position: relative;
@@ -224,10 +209,6 @@ a{
         text-align: center;
         margin-top: 15*$px;
         margin-bottom: 15*$px;
-        background-image: map-get($map: $background_img, $key: fondo_2);
-        background-size: cover;
-        background-color: map-get($map: $colores, $key: color_3);
-        background-position: center center;
         border-radius: 20*$px;
         h4 {
             font-size: 0.8*$rem;
@@ -248,14 +229,11 @@ a{
     padding: 0*$px;
     margin: 0*$px ;
     .contenedor3 {
+        @extend .back__negro;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-around;
-        background-image: map-get($map: $background_img, $key: fondo_2);
-        background-size: cover;
-        background-color: map-get($map: $colores, $key: color_3);
-        background-position: center center;
         position: relative;
         border-bottom: map-get($map: $borders, $key: border_yellow_10px_dashed);
         h3 {
@@ -275,14 +253,12 @@ a{
             vertical-align: middle;
             align-items: center;
         }
-        
         .footer__donde--texto {
             padding: 10*$px;
             text-align: left;
             vertical-align: middle;
             width:30%
         }
-        
         .footer__maps {
             padding: 20*$px; 
             iframe {
@@ -292,7 +268,6 @@ a{
                 padding: 10*$px; 
             }
         } 
-        
         .footer__redes {
             display: inline-block;
             position: relative;
@@ -303,26 +278,21 @@ a{
                 padding:10*$px;
                 border-radius: 100*$px;
                 height: 50*$px;
-            
             }
             a {
                 color: map-get($map: $colores, $key: color_1);
                 display: inline-block;
             }
         }
-        
         .footer__spotify {
             padding:10*$px ;
             iframe {
                 border-radius: 20*$px;
             }
         } 
-        
     } 
     .footer__derechos {
-        background-color: map-get($map: $colores, $key: color_2);
-        background-image: map-get($map: $background_img, $key: fondo_1);
-        background-size: cover;
+        @extend .back__rojo;
         font-size: 0.8*$rem;
         height: auto;
         h5 {
@@ -465,11 +435,7 @@ a{
 /* PAGINA DE MENU */
 
 .body2 {
-    background-image: map-get($map: $background_img, $key: fondo_2);
-    background-size: cover;
-    background-color: map-get($map: $colores, $key: color_3);
-    background-position: center center;
-    position: relative;
+    @extend .back__negro;
 }
 
 .main__menu{
